@@ -5,12 +5,12 @@ def getRequiredData(keys, data):
     result = {}
     for item in data.items():
       if item[0] in keys:
-        result[item[0].title()] =  str(item[1].title())
+        result[item[0]] = str(item[1])
     return result
 
-# storing input dictionary
 print('#################### Welcome to python world ##########################')
 
+# storing input dictionary
 data = {}
 userWantToInput = 'y'
 while True:
@@ -26,6 +26,7 @@ while True:
     else:
         break
 print('Your Data saved successfully !!')
+
 print('################################################')
 
 # keys for that values we want to fetch
@@ -40,7 +41,9 @@ while True:
         continue
     else:
         break
+
 print('################################################')
+
 print('Your requested data is as follows:  ')
 req_data = getRequiredData(keys , data )
 if len(req_data) == 0:
